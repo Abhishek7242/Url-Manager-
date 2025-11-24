@@ -1,0 +1,63 @@
+###############################################
+# React SPA - History Fallback
+###############################################
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ----- Allow good crawlers (SEO + Social Preview) -----
+  RewriteCond %{HTTP_USER_AGENT} Googlebot [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} Bingbot [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} Slurp [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} DuckDuckBot [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} FacebookExternalHit [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} Facebot [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} WhatsApp [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} Twitterbot [NC,OR]
+  RewriteCond %{HTTP_USER_AGENT} LinkedInBot [NC]
+  RewriteRule ^ - [L]
+
+  # Allow HEAD requests for OG previews
+  RewriteCond %{REQUEST_METHOD} HEAD
+  RewriteRule ^ - [L]
+
+  # Serve files if they exist
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback
+  RewriteRule . /index.html [L]
+</IfModule>
+
+###############################################
+# 404 fallback
+###############################################
+ErrorDocument 404 /index.html
+
+###############################################
+# Caching
+###############################################
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType image/* "access plus 1 year"
+  ExpiresByType font/* "access plus 1 year"
+</IfModule>
+
+###############################################
+# Security — block sensitive files
+###############################################
+<FilesMatch "^\.env">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes

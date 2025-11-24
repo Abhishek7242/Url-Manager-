@@ -3,61 +3,109 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Homepage - Highest priority -->
+
+  <!-- Homepage -->
   <url>
     <loc>https://www.urlmg.com/</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Dashboard - High priority for registered users -->
+
+  <!-- Dashboard -->
   <url>
     <loc>https://www.urlmg.com/dashboard</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Features page -->
+
+  <!-- Features -->
   <url>
     <loc>https://www.urlmg.com/features</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Pricing page -->
+
+  <!-- Pricing -->
   <url>
     <loc>https://www.urlmg.com/pricing</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- About page -->
+
+  <!-- About -->
   <url>
     <loc>https://www.urlmg.com/about</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Terms and Conditions -->
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.urlmg.com/contact</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tags -->
+  <url>
+    <loc>https://www.urlmg.com/tags</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Analytics -->
+  <url>
+    <loc>https://www.urlmg.com/analytics</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Suggestions -->
+  <url>
+    <loc>https://www.urlmg.com/suggestions</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Duplicates -->
+  <url>
+    <loc>https://www.urlmg.com/duplicates</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Storage -->
+  <url>
+    <loc>https://www.urlmg.com/storage</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms -->
   <url>
     <loc>https://www.urlmg.com/terms-and-conditions</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
-  <!-- Privacy Policy -->
+
+  <!-- Privacy -->
   <url>
     <loc>https://www.urlmg.com/privacy-policy</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
+
 </urlset>

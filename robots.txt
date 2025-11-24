@@ -1,0 +1,28 @@
+# robots.txt for https://www.urlmg.com/
+# Last updated: 2025-11-23
+
+User-agent: *
+Allow: /
+
+# Block access to sensitive/private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login/
+Disallow: /register/
+Disallow: /user/
+Disallow: /settings/
+Disallow: /internal/
+Disallow: /private/
+
+# Prevent indexing of URLs with query parameters to minimise duplicates
+Disallow: /*?*
+
+# Explicitly allow essential public pages
+Allow: /about
+Allow: /pricing
+Allow: /features
+Allow: /blog
+Allow: /docs
+
+# Sitemap location
+Sitemap: https://www.urlmg.com/sitemap.xml
